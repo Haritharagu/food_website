@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,11 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <div id="loader">
         <div class="spinner"></div>
@@ -43,7 +47,8 @@
             <div class="container">
                 <div class="hero-content">
                     <h1 class="reveal-text">Taste the <span>Happiness</span></h1>
-                    <p class="fade-in">Experience the finest gourmet cuisine delivered right to your doorstep. Elegant, delicious, and modern.</p>
+                    <p class="fade-in">Experience the finest gourmet cuisine delivered right to your doorstep. Elegant,
+                        delicious, and modern.</p>
                     <div class="hero-btns fade-in">
                         <a href="#menu" class="btn btn-primary">Order Now</a>
                         <a href="#about" class="btn btn-secondary">View Menu</a>
@@ -54,8 +59,118 @@
                 <div class="mouse"></div>
                 <p>Scroll Down</p>
             </div>
-        </main>
+            <!-- Menu Section -->
+            <section id="menu" class="menu container section">
+                <div class="section-header reveal">
+                    <h2 class="reveal-text"><span>Our Specialties</span></h2>
+                    <p>Explore our curated selection of gourmet dishes.</p>
+                </div>
 
-    <script src="main.js"></script>
+                <div class="menu-filter reveal">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="pizza">Pizza</button>
+                    <button class="filter-btn" data-filter="burger">Burger</button>
+                    <button class="filter-btn" data-filter="dessert">Dessert</button>
+                    <button class="filter-btn" data-filter="drink">Drinks</button>
+                </div>
+
+                <div class="menu-grid reveal">
+                    <!-- Pizza Example -->
+                    <div class="menu-item" data-category="pizza">
+                        <div class="item-img">
+                            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&q=80&w=2070"
+                                alt="Pizza">
+                            <div class="item-overlay">
+                                <button class="add-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="item-info">
+                            <h3>Margherita Elegance</h3>
+                            <p>Fresh basil, buffalo mozzarella, and sun-ripened tomatoes.</p>
+                            <div class="item-footer">
+                                <span class="price">$18.00</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Burger Example -->
+                    <div class="menu-item" data-category="burger">
+                        <div class="item-img">
+                            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&q=80&w=2070"
+                                alt="Burger">
+                            <div class="item-overlay">
+                                <button class="add-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="item-info">
+                            <h3>Truffle Wagyu</h3>
+                            <p>Aged wagyu beef, black truffle aioli, and brioche bun.</p>
+                            <div class="item-footer">
+                                <span class="price">$24.00</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Dessert Example -->
+                    <div class="menu-item" data-category="dessert">
+                        <div class="item-img">
+                            <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&q=80&w=2070"
+                                alt="Cake">
+                            <div class="item-overlay">
+                                <button class="add-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="item-info">
+                            <h3>Lava Fusion</h3>
+                            <p>Dark chocolate fondant with a molten core and berry dust.</p>
+                            <div class="item-footer">
+                                <span class="price">$12.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section id="about" class="about section">
+                <div class="container">
+                    <div class="about-flex">
+                        <div class="about-img reveal">
+                            <img src="https://images.unsplash.com/photo-1577219481157-069149469276?auto=format&fit=crop&q=80&w=2070"
+                                alt="Chef">
+                            <div class="experience-badge">
+                                <span>15+</span>
+                                <p>Years of Culinary Excellence</p>
+                            </div>
+                        </div>
+                        <div class="about-content">
+                            <div class="section-header reveal">
+                                <h2 class="reveal-text"><span>Our Story</span></h2>
+                                <p>Crafting Unforgettable Flavors Since 2010</p>
+                            </div>
+                            <p class="reveal">At Gourmet Bliss, we believe food is an art form. Every dish is a
+                                masterpiece, carefully composed with the finest organic ingredients and a passion for
+                                gastronomy. Our chefs blend traditional techniques with modern innovation to bring you
+                                an unparalleled dining experience.</p>
+                            <div class="stats reveal">
+                                <div class="stat-item">
+                                    <h3>10k+</h3>
+                                    <p>Happy Customers</p>
+                                </div>
+                                <div class="stat-item">
+                                    <h3>50+</h3>
+                                    <p>Dishes</p>
+                                </div>
+                                <div class="stat-item">
+                                    <h3>30min</h3>
+                                    <p>Avg Delivery</p>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-primary reveal">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <script src="main.js"></script>
 </body>
+
 </html>
