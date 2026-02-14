@@ -35,6 +35,48 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 // Parallax effect for hero
 window.addEventListener('scroll', () => {
     const heroBg = document.querySelector('.hero-bg');
-    let scrollVal = window.scrollY;
-    heroBg.style.transform = `scale(1.1) translateY(${scrollVal * 0.3}px)`;
+    if (heroBg) {
+        let scrollVal = window.scrollY;
+        heroBg.style.transform = `scale(1.1) translateY(${scrollVal * 0.3}px)`;
+    }
+});
+
+// Menu Filtering
+const filterBtns = document.querySelectorAll('.filter-btn');
+const menuItems = document.querySelectorAll('.menu-item');
+
+filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        // Active button state
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.getAttribute('data-filter');
+
+        menuItems.forEach(item => {
+            if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                item.style.display = 'block';
+                setTimeout(() => item.style.opacity = '1', 10);
+            } else {
+                item.style.opacity = '0';
+                setTimeout(() => item.style.display = 'none', 400);
+            }
+        });
+    });
+});
+
+// Cart Logic
+let cartCount = 0;
+const cartDisplay = document.getElementById('cart-count');
+document.querySelectorAll('.add-cart').forEach(btn => {
+    btn.addEventListener('click', () => {
+        cartCount++;
+        cartDisplay.textContent = cartCount;
+        btn.textContent = 'Added! ✓';
+        btn.style.background = '#22c55e';
+        setTimeout(() => {
+            btn.textContent = 'Add to Cart';
+            btn.style.background = 'var(--orange)';
+        }, 2000);
+    });
 });
